@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Temperature Converter</title>
+</head>
+<script>
+          function findCelsius(){
+          var fahrenheit = document.getElementById("fahrenheit").value;
+          var celsius= document.getElementById("output").value;
+          if (fahrenheit >= 100  && fahrenheit <=212 ){
+          celsius = Math.round((fahrenheit - 32) * 5/9);
+          document.getElementById("output").innerHTML = celsius ;
+
+          }else if (fahrenheit ==999) {
+          alert("Goodbye!!!");
+          }else{
+          document.getElementById("output").innerHTML = "You entered " + fahrenheit + ". Entry must range from 100 to 212.  If you wish to end the program press 999" ;
+          //alert ("You entered " + fahrenheit + " Entry must range from 100 to 212.")
+          }
+          }
+
+</script>
+  <body>
+  		<h2>Enter Fahrenheit</h2>
+  		<input type="text" id="fahrenheit"  />
+  		<button onclick="findCelsius()" >Find Celsius</button>
+      <h2> Result in Celsius:  <span id="output"></span> </h2>
+    <body>
+</html>
